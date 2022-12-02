@@ -1,0 +1,77 @@
+html, body, aside {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+body {
+	padding: 70px;
+	padding-bottom: 0px;
+	background-attachment: fixed;
+	background-position: 50% 0;
+	background-size: cover;	
+	padding-top: 120px;
+}
+aside {
+	width: 233px;
+	min-height: 500px;
+}
+aside.right {
+	margin-left: auto;
+}
+a:hover {
+	text-decoration: none;
+}
+.bg-red {
+	background-image: url(../image/bg-red.jpg);
+}
+.bg-orange {
+	background-image: url(../image/bg-orange.jpg);
+}
+.bg-yellow {
+	background-image: url(../image/bg-yellow.jpg);
+}
+.bg-green {
+	background-image: url(../image/bg-green.jpg);
+}
+.bg-cyan {
+	background-image: url(../image/bg-cyan.jpg);
+}
+.bg-blue {
+	background-image: url(../image/bg-blue.jpg);
+}
+.bg-purple {
+	background-image: url(../image/bg-purple.jpg);
+}
+.bg-pink {
+	background-image: url(../image/bg-pink.jpg);
+}
+.bg-black {
+	background-image: url(../image/bg-black.jpg);
+}
+.body {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+	body {
+		padding: 40px;
+		padding-top: 100px;
+	}
+}
+@media screen and (max-width: 767px) {
+	body {
+		padding: 0px;
+		padding-top: 140px;
+	}
+	aside {
+		width: 65%;
+	}
+	.sky-mega-menu{
+		margin-left: 0%;
+		padding-left: 0%;
+	}
+	.timer__content {
+	  display: flex;
+	  padding-top: 70px;
+	}
+}

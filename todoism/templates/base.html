@@ -1,0 +1,128 @@
+<nav class="purple lighten-2" role="navigation">
+    <div class="nav-wrapper container">
+        <a href="#intro" class="brand-logo">TodoList</a>
+        <a data-target="nav-mobile" class="sidenav-trigger button"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            {% if current_user.is_authenticated %}
+                <li>
+                    <a class="waves-effect waves-light btn orange" href="#app">{{ current_user.username }}
+                        <span class="badge new" id="active-count-nav">{{ active_items }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="waves-effect waves-light" id="logout-btn" data-href="{{ url_for('auth.logout') }}">
+                        <i class="material-icons">power_settings_new</i>
+                    </a>
+                </li>
+            {% else %}
+                <li><a class="waves-effect waves-light btn red" href="#login">{{ _('Login') }}</a></li>
+            {% endif %}
+            <li>
+                <a class="waves-effect waves-light dropdown-trigger" id="locale-dropdown-btn" data-target="locale-dropdown">
+                    <i class="material-icons">language</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<ul id="nav-mobile" class="sidenav">
+    {% if current_user.is_authenticated %}
+        <li><a class="waves-effect waves-light btn red clear-btn sidenav-close">Clear</a></li>
+        <li><a class="waves-effect waves-light btn orange sidenav-close" id="app-btn"
+               href="#app">{{ current_user.username }}</a>
+        </li>
+        <li><a class="waves-effect waves-light btn grey sidenav-close" id="logout-btn"
+               data-href="{{ url_for('auth.logout') }}">{{ _('Logout') }}</a></li>
+    {% else %}
+        <li><a class="waves-effect waves-light btn red sidenav-close" href="#login">{{ _('Login') }}</a></li>
+    {% endif %}
+</ul>
+
+<ul id="locale-dropdown" class="dropdown-content">
+    <li><a class="lang-btn" data-href="{{ url_for('home.set_locale', locale='zh_Hans_CN') }}">简体中文</a></li>
+    <li><a class="lang-btn" data-href="{{ url_for('home.set_locale', locale='en_US') }}">English</a></li>
+</ul>
+
+	<header class="cd-header">
+			<div class="header-wrapper">
+				<div class="logo-wrap">
+					<a href="#" class="hover-target"><span>Todo</span>List</a>
+				</div>
+				<div class="nav-but-wrap">
+					<div class="menu-icon hover-target">
+						<span class="menu-icon__line menu-icon__line-left"></span>
+						<span class="menu-icon__line"></span>
+						<span class="menu-icon__line menu-icon__line-right"></span>
+					</div>					
+				</div>					
+			</div>				
+	</header>
+	
+		<div class="nav">
+			<div class="nav__content">
+				<ul class="nav__list">
+					<li class="nav__list-item active-nav"><a href="#" class="hover-target">Home</a></li>
+					<li class="nav__list-item"><a href="#" class="hover-target">Portfolio</a></li>
+					<li class="nav__list-item"><a href="#" class="hover-target">Studio</a></li>
+					<li class="nav__list-item"><a href="#" class="hover-target">News</a></li>
+					<li class="nav__list-item"><a href="#" class="hover-target">Contact</a></li>
+				</ul>
+			</div>
+		</div>		
+		
+			
+		
+		<div class='cursor' id="cursor"></div>
+		<div class='cursor2' id="cursor2"></div>
+		<div class='cursor3' id="cursor3"></div>
+		
+		
+
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<div class="footer">
+  <div class="bubbles">
+    <div class="bubble" style="--size:3.7213421480238473rem; --distance:9.505346460759434rem; --position:40.22788841130817%; --time:2.5579428080835602s; --delay:-2.551388062067941s;"></div>
+    <div class="bubble" style="--size:5.500247300710568rem; --distance:6.2118813086522735rem; --position:87.07174911124845%; --time:3.7950243388260327s; --delay:-3.270237306503343s;"></div>
+    <div class="bubble" style="--size:2.3242940429011956rem; --distance:7.044944494811669rem; --position:101.28750378546107%; --time:2.629329053292902s; --delay:-2.4302631916260564s;"></div>
+    <div class="bubble" style="--size:5.368267979463531rem; --distance:6.984903032149823rem; --position:24.672901605467377%; --time:3.6922347100113684s; --delay:-2.7637748546263308s;"></div>
+    <div class="bubble" style="--size:2.308292712367696rem; --distance:7.240308566969028rem; --position:-2.2618473747363588%; --time:2.7783399326076745s; --delay:-2.422323317653233s;"></div>
+    <div class="bubble" style="--size:2.589049422686883rem; --distance:7.620168432414982rem; --position:57.960067264348396%; --time:3.1677481470068454s; --delay:-3.9895937435743383s;"></div>
+    <div class="bubble" style="--size:4.012494033150956rem; --distance:7.215070310722501rem; --position:103.90156330955398%; --time:3.581799241298079s; --delay:-3.2842101855509367s;"></div>
+    <div class="bubble" style="--size:5.486463553636168rem; --distance:8.178724244451335rem; --position:94.8496390776951%; --time:3.942288747270057s; --delay:-2.4935541596119926s;"></div>
+    <div class="bubble" style="--size:2.5838969336339064rem; --distance:8.512391306969278rem; --position:0.42123986082513554%; --time:2.1258922491501977s; --delay:-3.333826864507246s;"></div>
+    <div class="bubble" style="--size:5.079803260056025rem; --distance:6.388128560454028rem; --position:20.300017386843756%; --time:2.659418516406643s; --delay:-3.078550380210786s;"></div>
+    <div class="bubble" style="--size:3.6577705907998803rem; --distance:9.905163352149756rem; --position:-3.9018298355419367%; --time:3.2166315563669725s; --delay:-3.749328245209214s;"></div>
+    <div class="bubble" style="--size:2.2293257420881094rem; --distance:6.3675369567357185rem; --position:20.20898718445759%; --time:2.31254483043571s; --delay:-3.5507459589952064s;"></div>
+    <div class="bubble" style="--size:4.180004160345056rem; --distance:9.267635853498593rem; --position:96.60912315927816%; --time:3.1210635860440274s; --delay:-2.2517472307884163s;"></div>
+    <div class="bubble" style="--size:2.0066820744313763rem; --distance:7.817672455095477rem; --position:56.22441021925781%; --time:3.1747716675531716s; --delay:-3.989920132346828s;"></div>
+    <div class="bubble" style="--size:3.057806550977351rem; --distance:7.631286325199999rem; --position:53.439190329260384%; --time:2.538318608236518s; --delay:-3.6058974363494176s;"></div>
+    <div class="bubble" style="--size:5.153210319185682rem; --distance:6.748442380597138rem; --position:46.17466989898253%; --time:2.1432715254569605s; --delay:-2.4479428801056713s;"></div>
+    <div class="bubble" style="--size:2.98933774997945rem; --distance:8.666064909668048rem; --position:52.397769148841%; --time:3.8833002688420803s; --delay:-2.3399768430183183s;"></div>
+    <div class="bubble" style="--size:4.694873032244396rem; --distance:8.701184590459242rem; --position:78.91091813317597%; --time:2.3396013625830787s; --delay:-3.5463553962908274s;"></div>
+  </div>
+  <div class="content">
+    <div>
+      <div><b>Eldew</b><a href="#">Secuce</a><a href="#">Drupand</a><a href="#">Oceash</a><a href="#">Ugefe</a><a href="#">Babed</a></div>
+      <div><b>Spotha</b><a href="#">Miskasa</a><a href="#">Agithe</a><a href="#">Scesha</a><a href="#">Lulle</a></div>
+      <div><b>Chashakib</b><a href="#">Chogauw</a><a href="#">Phachuled</a><a href="#">Tiebeft</a><a href="#">Ocid</a><a href="#">Izom</a><a href="#">Ort</a></div>
+      <div><b>Athod</b><a href="#">Pamuz</a><a href="#">Vapert</a><a href="#">Neesk</a><a href="#">Omemanen</a></div>
+    </div>
+    <div>
+      <p>©2019 Whatever</p>
+    </div>
+  </div>
+</div>
+<svg style="position:fixed; top:100vh;">
+  <defs>
+    <filter id="blob">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob"></feColorMatrix>
+      <feComposite in="SourceGraphic" in2="blob" operator="atop"></feComposite>
+    </filter>
+  </defs>
+</svg>

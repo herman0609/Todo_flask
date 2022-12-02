@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+	
+	<div class="container0">
+	  <div class="box"></div>
+	  <div class="container0-forms">
+	    <div class="container0-info">
+	      <div class="info-item">
+	        <div class="table">
+	          <div class="table-cell">
+	            <p>
+	              Have an account?
+	            </p>
+	            <div class="btn">
+	              Log in
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="info-item">
+	        <div class="table">
+	          <div class="table-cell">
+	            <p>
+	              Don't have an account? 
+	            </p>
+				<a class="btn" id="register-btn">{{ _('test') }}</a>
+
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="container0-form">
+	      <div class="form-item log-in">
+	        <div class="table">
+	          <div class="table-cell">
+        <input class="validate login-input" id="username-input" name="username" value="zgrimes" type="text" placeholder="Username"
+               autofocus required>
+        <input class="validate login-input" id="password-input" name="password" value="mention" type="password" placeholder="Password"
+               required>
+
+	              <a class="btn" id="login-btn">{{ _('Login') }}</a>
+
+	          </div>
+	        </div>
+	      </div>
+
+	    </div>
+	  </div>
+	</div>
+<!-- 
+	      <div class="form-item sign-up">
+	        <div class="table">
+	          <div class="table-cell">
+	            <input name="email" placeholder="Email" type="text" />
+				  <input name="fullName" placeholder="Full Name" type="text" />
+				  <input id="username0-input" name="username0" placeholder="Username" type="text" />
+				  <input id="password0-input" name="password0" placeholder="Password" type="Password" />
+				<a class="btn grey" id="register0-btn">{{ _('register') }}</a>
+	          </div>
+	        </div>
+	      </div> -->
+	
+{% endblock %}

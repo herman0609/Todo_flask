@@ -1,0 +1,166 @@
+button:focus, input:focus {
+  outline: none;
+}
+
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  position: absolute;
+  padding-left: 20%;
+}
+
+.grid .cards {
+	padding-left: 10%;
+    padding-top: 250px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 2fr);
+}
+@media screen and (max-width: 900px) {
+  .grid .cards {
+    grid-template-rows: repeat(9, 2fr);
+  }
+}
+.grid .cards .bg {
+  background-color: #fff;
+  box-shadow: 0px 1px 12px 0px rgba(74, 74, 74, 0.34);
+  cursor: pointer;
+  transition: 0.5s;
+}
+@media screen and (max-width: 900px) {
+  .grid .cards .bg {
+    margin-bottom: 1rem;
+  }
+}
+.grid .cards .bg:hover {
+  box-shadow: 0px 1px 20px 0px rgba(74, 74, 74, 0.64);
+  transition: 0.5s;
+}
+.grid .cards .card {
+  padding: 1rem 2rem 4rem 1rem;
+}
+.grid .cards .learn {
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+  color: #fff;
+}
+.grid .cards .card-learn {
+	grid-column: 1/6;
+    grid-row: 1/3;
+}
+@media screen and (max-width: 900px) {
+  .grid .cards .card-learn {
+    grid-column: 1/13;
+    grid-row: 8/9;
+  }
+}
+.grid .cards .card-download {
+  grid-column: 6/9;
+  word-break: break-all;
+  grid-row: 1/4;
+  z-index: 1;
+  background-image: linear-gradient(147deg, #8addd3 0%, #555dd9 74%);
+  color: #fff;
+}
+@media screen and (max-width: 900px) {
+  .grid .cards .card-download {
+    grid-column: 1/13;
+    grid-row: 2/3;
+  }
+}
+.add {
+	padding: 1rem 0.5rem 1rem;
+    z-index: 110;
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 300px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .add {
+    grid-column: 1/13;
+    grid-row: 1/2;
+  }
+}
+.add input {
+  box-shadow: 0px 1px 12px 0px rgba(74, 74, 74, 0.34);
+  border: 2px solid #d2d2d2;
+  padding: 0.7rem 0 0.8rem 0.7rem;
+  border-radius: 5px;
+}
+.add button {
+    cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    padding: 1rem 1.3rem;
+    position: relative;
+    margin-top: 15px;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    box-shadow: 0px 2px 16px 0px rgb(255 37 37 / 55%);
+    color: #fff;
+}
+.grid .cards .card-design {
+  grid-column: 1/6;
+  grid-row: 2/4;
+  z-index: 1;
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  color: #fff;
+  height: 400;
+}
+@media screen and (max-width: 900px) {
+  .grid .cards .card-design {
+    grid-column: 1/13;
+    grid-row: 3/4;
+  }
+}
+.grid .cards .card-get {
+  grid-column: 9/14;
+  grid-row: 2/4;
+  background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+  color: #212121;
+}
+@media screen and (max-width: 900px) {
+  .grid .cards .card-get {
+    grid-column: 1/13;
+    grid-row: 4/5;
+  }
+}
+.grid .cards .card-train {
+  grid-column: 6/10;
+  grid-row: 3/5;
+  z-index: 1;
+  background-image: linear-gradient(147deg, #f35240 0%, #dd2235 74%);
+  color: #fff;
+}
+@media screen and (max-width: 900px) {
+  .grid .cards .card-train {
+    grid-column: 1/13;
+    grid-row: 5/6;
+  }
+}
+.grid .cards .card-learn-js {
+  grid-column: 4/6;
+  grid-row: 4/6;
+}
+@media screen and (max-width: 900px) {
+  .grid .cards .card-learn-js {
+    grid-column: 1/13;
+    grid-row: 6/7;
+  }
+}
+.grid .cards .card-visit {
+  grid-column: 10/13;
+  grid-row: 3/5;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  color: #212121;
+}
+@media screen and (max-width: 900px) {
+  .grid .cards .card-visit {
+    grid-column: 1/13;
+    grid-row: 7/8;
+  }
+}

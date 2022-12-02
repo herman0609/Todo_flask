@@ -1,0 +1,79 @@
+
+.center {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  left: 42%;
+  top: 570px;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+#left-side,
+#right-side {
+  position: inherit;
+  display: inline-block;
+  height: 330px;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+}
+#right-side {
+  left: 110px;
+  width: 500px;
+  margin-left: -10px;
+}
+#left-side > div {
+	height: 70px;
+	width: 80px;
+  position: relative;
+  background: #362F31;
+  color: #FFF;
+  display: block;
+  padding: 10px;
+  margin: 10px 0 10px 10px;
+}
+#right-side > div {
+  height: 70px;
+  position: relative;
+  color: #000;
+  display: block;
+  padding: 10px;
+  margin: 10px;
+  margin: 10px 10px 10px 0px;
+}
+#left-side > div:hover {
+  cursor: pointer;
+  background: #454344;
+}
+#left-side div div,
+#right-side div div {
+  height: 40px;
+}
+.center h1 {
+  color: #ABA5A7;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.center p {
+  font-size: 12px;
+}
+#one-b {
+  background: #EF4707;
+  border-right: 70px inset #BC390D;
+  width: 300px;
+}
+#two-b {
+  background: #FF9704;
+  border-right: 80px inset #C4770B;
+  width: 200px;
+}
+#three-b {
+  background: #FBD721;
+  border-right: 30px inset #C6A91C;
+  width: 250px;
+}
+#four-b {
+  background: #4899E8;
+  border-right: 150px inset #3879B8;
+	width: 350px;
+}

@@ -1,0 +1,287 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+		
+
+
+	<div class="mainbody">
+	<div class="sidemenu">
+		<!-- mega menu -->
+		<ul class="sky-mega-menu sky-mega-menu-pos-left sky-mega-menu-anim-scale sky-mega-menu-response-to-switcher">					
+			<!-- dashboard -->
+			<li>
+				<a href="#"><i class="fa fa-dashboard"></i>Dashboard</a>
+			</li>
+			<!--/ dashboard -->
+			
+			<!-- switcher -->
+			<li class="switcher">
+				<a href="#"><i class="fa fa-bars"></i>Menu</a>
+			</li>
+			<!--/ switcher -->
+			
+			<!-- posts -->
+			<li aria-haspopup="true">
+				<a href="#"><i class="fa fa-thumb-tack"></i>Posts</a>
+				<div class="grid-container3">
+					<ul>
+						<li>
+							<a href="#"><i class="fa fa-list"></i>All posts</a>
+							<div class="grid-container3">
+								<ul>
+									<li><a href="#">Published</a></li>
+									<li><a href="#">Pending review</a></li>
+									<li><a href="#">Drafts</a></li>
+									<li><a href="#">Removed</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#"><i class="fa fa-plus"></i>Add new</a></li>
+						<li><a href="#"><i class="fa fa-gear"></i>Categories</a></li>
+						<li><a href="#"><i class="fa fa-tags"></i>Tags</a></li>
+					</ul>
+				</div>
+			</li>
+			<!--/ posts -->
+			
+			<!-- media -->
+			<li aria-haspopup="true">
+				<a href="#"><i class="fa fa-sun-o"></i>Media</a>
+				<div class="grid-container3">
+					<ul>
+						<li>
+							<a href="#"><i class="fa fa-th-large"></i>Library</a>
+							<div class="grid-container3">
+								<ul>
+									<li><a href="#"><i class="fa fa-picture"></i>Pictures</a></li>
+									<li><a href="#"><i class="fa fa-film"></i>Video</a></li>
+									<li><a href="#"><i class="fa fa-music"></i>Audio</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#"><i class="fa fa-plus"></i>Add new</a></li>
+					</ul>
+				</div>
+			</li>
+			<!--/ media -->
+			
+			<!-- pages -->
+			<li aria-haspopup="true">
+				<a href="#"><i class="fa fa-file"></i>Pages</a>
+				<div class="grid-container3">
+					<ul>
+						<li><a href="#"><i class="fa fa-list"></i>All pages</a></li>
+						<li><a href="#"><i class="fa fa-plus"></i>Add new</a></li>
+					</ul>
+				</div>
+			</li>
+			<!--/ pages -->
+			
+			<!-- comments -->
+			<li>
+				<a href="#"><i class="fa fa-comments"></i>Comments</a>
+			</li>
+			<!--/ comments -->
+			
+			<!-- appearance -->
+			<li aria-haspopup="true">
+				<a href="#"><i class="fa fa-desktop"></i>Appearance</a>
+				<div class="grid-container3">
+					<ul>
+						<li><a href="#"><i class="fa fa-adjust"></i>Themes</a></li>
+						<li><a href="#"><i class="fa fa-sitemap"></i>Menus</a></li>
+						<li><a href="#"><i class="fa fa-edit"></i>Editor</a></li>
+					</ul>
+
+				</div>
+			</li>
+			<!--/ appearance -->
+			
+			<!-- plugins -->
+			<li aria-haspopup="true">
+				<a href="#"><i class="fa fa-bolt"></i>Plugins</a>
+				<div class="grid-container3">
+					<ul>
+						<li><a href="#"><i class="fa fa-plus"></i>Add new</a></li>
+						<li><a href="#"><i class="fa fa-edit"></i>Editor</a></li>
+					</ul>
+				</div>
+			</li>
+			<!--/ plugins -->
+			
+			<!-- users -->
+			<li aria-haspopup="true">
+				<a href="#"><i class="fa fa-group"></i>Users</a>
+				<div class="grid-container3">
+					<ul>
+						<li><a href="#"><i class="fa fa-list"></i>All users</a></li>
+						<li><a href="#"><i class="fa fa-plus"></i>Add new</a></li>
+						<li><a href="#"><i class="fa fa-user"></i>Your profile</a></li>
+					</ul>
+				</div>
+			</li>
+			<!--/ users -->
+			
+			<!-- tools -->
+			<li aria-haspopup="true" class="bottom">
+				<a href="#"><i class="fa fa-wrench"></i>Tools</a>
+				<div class="grid-container3">
+					<ul>
+						<li><a href="#"><i class="fa fa-lightbulb-o"></i>Available tools</a></li>
+						<li><a href="#"><i class="fa fa-download"></i>Import</a></li>
+						<li><a href="#"><i class="fa fa-upload"></i>Export</a></li>
+					</ul>
+				</div>
+			</li>
+			<!--/ tools -->
+			
+			<!-- settings -->
+			<li aria-haspopup="true" class="bottom">
+				<a href="#"><i class="fa fa-gears"></i>Settings</a>
+				<div class="grid-container3">
+					<ul>
+						<li><a href="#"><i class="fa fa-book"></i>General</a></li>
+						<li><a href="#"><i class="fa fa-pencil"></i>Writing</a></li>
+						<li><a href="#"><i class="fa fa-eye"></i>Reading</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>Discussion</a></li>
+						<li><a href="#"><i class="fa fa-picture-o"></i>Media</a></li>
+						<li><a href="#"><i class="fa fa-link"></i>Permalinks</a></li>
+					</ul>
+				</div>
+			</li>
+			<!--/ settings -->
+		</ul>
+		<!--/ mega menu -->
+		
+	</div>
+        <input type="hidden" id="end_time" value="{{ items[0].end_time }}">
+	<div class="timer">
+	  <ul class="timer__content">
+		 <li class="timer__item">
+			<p class="timer__name">days</p>
+			<span id="days" class="timer__number"></span>
+		 </li>
+		 <li class="timer__item">
+			<p class="timer__name">hours</p>
+			<span id="hours" class="timer__number"></span>
+		 </li>
+		 <li class="timer__item">
+			<p class="timer__name">minutes</p>
+			<span id="minutes" class="timer__number"></span>
+		 </li>
+		 <li class="timer__item">
+			<p class="timer__name">seconds</p>
+			<span id="seconds" class="timer__number"></span>
+		 </li>
+	  </ul>
+	  <p class="timer__text">This is the remainder of your latest task</p>
+	</div>
+	
+	<div id="calendar" class="calendar"></div>
+	
+	
+	<div class="add border">
+	  <h3>Add new Task:</h3>
+	  <div class="input-field">
+	    <input style="color: white" id="item-body" name="body" type="text" required placeholder="Task..."/>
+          <button id="quick-item-btn" type="button"><i class="fa fa-angle-right"></i></button>
+	  </div>
+	</div>
+	
+<div class="grid">
+
+  <div class="cards">
+    {% if items | length  >0 %}
+        <div class="card card-learn learn bg">
+          <h3>{{ items[0].body }}<br>{{ items[0].category.name }}.</h3>
+        </div>
+    {% endif %}
+    {% if items | length  > 1 %}
+        <div class="card card-download bg">
+          <h3>{{ items[1].body }}<br>{{ items[1].category.name }}.</h3>
+        </div>
+    {% endif %}
+    {% if items | length  > 2 %}
+        <div class="card card-design bg">
+          <h3>{{ items[2].body }}<br>{{ items[2].category.name }}.</h3>
+        </div>
+    {% endif %}
+    {% if items | length  > 3 %}
+        <div class="card card-get bg">
+          <h3>{{ items[3].body }}<br>{{ items[3].category.name }}.</h3>
+        </div>
+    {% endif %}
+  {% if items | length  > 4 %}
+        <div class="card card-train bg">
+          <h3>{{ items[4].body }}<br>{{ items[4].category.name }}.</h3>
+        </div>
+    {% endif %}
+
+  </div>
+
+</div>
+	
+  <div class="index-todo">
+  <!-- partial:index.partial.html -->
+  <svg viewBox="0 0 0 0" style="position: absolute; z-index: -1; opacity: 0;">
+    <defs>
+      <linearGradient id="boxGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="25" y2="25">
+        <stop offset="0%"   stop-color="#27FDC7"/>
+        <stop offset="100%" stop-color="#0FC0F5"/>
+      </linearGradient>
+  
+      <linearGradient id="lineGradient">
+        <stop offset="0%"    stop-color="#0FC0F5"/>
+        <stop offset="100%"  stop-color="#27FDC7"/>
+      </linearGradient>
+  
+      <path id="todo__line" stroke="url(#lineGradient)" d="M21 12.3h168v0.1z"></path>
+      <path id="todo__box" stroke="url(#boxGradient)" d="M21 12.7v5c0 1.3-1 2.3-2.3 2.3H8.3C7 20 6 19 6 17.7V7.3C6 6 7 5 8.3 5h10.4C20 5 21 6 21 7.3v5.4"></path>
+      <path id="todo__check" stroke="url(#boxGradient)" d="M10 13l2 2 5-5"></path>
+      <circle id="todo__circle" cx="13.5" cy="12.5" r="10"></circle>
+    </defs>
+  </svg>
+  
+  
+  <div class="todo-list">
+      {% for todo in todo_list %}
+        <label class="todo">
+          <input  data-done={{ todo.done|tojson }}  data-href="{{ url_for('todo.toggle_item', item_id=todo.id) }}" class="todo__state todo-done-btn" type="checkbox" {% if todo.done == 1 %} checked {% endif %} />
+
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 25" class="todo__icon">
+            <use xlink:href="#todo__line" class="todo__line"></use>
+            <use xlink:href="#todo__box" class="todo__box"></use>
+            <use xlink:href="#todo__check" class="todo__check"></use>
+            <use xlink:href="#todo__circle" class="todo__circle"></use>
+          </svg>
+
+          <div class="todo__text">{{ todo.body }}</div>
+
+        </label>
+      {% endfor %}
+
+  </div>
+  
+  
+  
+  
+  
+  <!-- partial -->
+  <script  src="static/js/list.js"></script>
+  </div>
+
+
+	</div>
+	
+
+
+
+
+{% endblock %}
+
+
+
+
